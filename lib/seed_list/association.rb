@@ -12,8 +12,8 @@ module SeedList
         has_one :seed_list,
           as: :tournament,
           class_name: SeedList::Model,
-          dependent: :destroy,
-          readonly: true
+          dependent: :destroy
+        #,readonly: true
 
         class_eval do
           def seed_list(skip_cache = true)
